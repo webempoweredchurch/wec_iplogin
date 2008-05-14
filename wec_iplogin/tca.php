@@ -64,12 +64,11 @@ $TCA["tx_weciplogin_accounts"] = array (
 			"exclude" => 1,		
 			"label" => "LLL:EXT:wec_iplogin/locallang_db.xml:tx_weciplogin_accounts.feusergroup",		
 			"config" => Array (
-				"type" => "group",	
-				"internal_type" => "db",	
-				"allowed" => "fe_groups",	
-				"size" => 5,	
-				"minitems" => 0,
-				"maxitems" => 99,
+				"type" => "select",	
+				"foreign_table" => "fe_groups",	
+				"size" => 6,	
+				"minitems" => 1,
+				"maxitems" => 50,
 			)
 		),
 	),
