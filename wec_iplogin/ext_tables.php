@@ -1,6 +1,8 @@
 <?php
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
+t3lib_extMgm::addLLrefForTCAdescr('tx_weciplogin_accounts','EXT:wec_iplogin/csh/locallang_csh_txweciploginaccounts.php');
+
 t3lib_extMgm::allowTableOnStandardPages('tx_weciplogin_accounts');
 
 $TCA["tx_weciplogin_accounts"] = array (
