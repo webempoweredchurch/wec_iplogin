@@ -4,13 +4,13 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 $TCA["tx_weciplogin_accounts"] = array (
 	"ctrl" => $TCA["tx_weciplogin_accounts"]["ctrl"],
 	"interface" => array (
-		"showRecordFieldList" => "hidden,starttime,endtime,name,ip,feusergroup"
+		"showRecordFieldList" => "disabled,starttime,endtime,name,ip,feusergroup"
 	),
 	"feInterface" => $TCA["tx_weciplogin_accounts"]["feInterface"],
 	"columns" => array (
-		'hidden' => array (		
+		'disabled' => array (		
 			'exclude' => 1,
-			'label'   => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
+			'label'   => 'LLL:EXT:lang/locallang_general.xml:LGL.disable',
 			'config'  => array (
 				'type'    => 'check',
 				'default' => '0'
@@ -73,7 +73,7 @@ $TCA["tx_weciplogin_accounts"] = array (
 		),
 	),
 	"types" => array (
-		"0" => array("showitem" => "hidden;;1;;1-1-1, name, ip, feusergroup")
+		"0" => array("showitem" => "disabled;;1;;1-1-1, name, ip, feusergroup")
 	),
 	"palettes" => array (
 		"1" => array("showitem" => "starttime, endtime")

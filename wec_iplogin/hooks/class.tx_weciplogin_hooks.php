@@ -32,7 +32,7 @@ class tx_weciplogin_hooks {
 	function login(&$pObj, &$param) {
 		
 		// get where clause
-		$where = 'hidden = 0 AND (('.time().' > starttime AND '.time().' < endtime) OR (starttime = 0 AND endtime = 0) OR (starttime = 0 AND '.time().' < endtime) OR ('.time().' > starttime AND endtime = 0))';
+		$where = 'disabled = 0 AND deleted=0 AND (('.time().' > starttime AND '.time().' < endtime) OR (starttime = 0 AND endtime = 0) OR (starttime = 0 AND '.time().' < endtime) OR ('.time().' > starttime AND endtime = 0))';
 		
 		// get all account records from the db
 		$res = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('*', 'tx_weciplogin_accounts', $where);

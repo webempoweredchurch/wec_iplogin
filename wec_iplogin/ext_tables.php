@@ -13,7 +13,7 @@ $TCA["tx_weciplogin_accounts"] = array (
 		'default_sortby' => "ORDER BY crdate",	
 		'delete' => 'deleted',	
 		'enablecolumns' => array (		
-			'disabled' => 'hidden',	
+			'disabled' => 'disabled',	
 			'starttime' => 'starttime',	
 			'endtime' => 'endtime',
 		),
@@ -21,7 +21,7 @@ $TCA["tx_weciplogin_accounts"] = array (
 		'iconfile'          => t3lib_extMgm::extRelPath($_EXTKEY).'icon_tx_weciplogin_accounts.gif',
 	),
 	"feInterface" => array (
-		"fe_admin_fieldList" => "hidden, starttime, endtime, name, ip, feusergroup",
+		"fe_admin_fieldList" => "disabled, starttime, endtime, name, ip, feusergroup",
 	)
 );
 ?>
